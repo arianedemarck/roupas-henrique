@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look do Henrique Ravi 👶</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>✨ Guarda-Roupa do Henrique Ravi ✨</h1>
+            <p>Gerador de combinações de looks por clima</p>
+        </header>
+
+        <main class="grid-layout">
+            <!-- Coluna Principal: Clima e Seleção -->
+            <section class="card-main">
+                <div class="card-clima">
+                    <h3>Como está o tempo hoje? 🌤️</h3>
+                    <div class="botoes-clima">
+                        <button class="btn-clima ativo" data-clima="calor">☀️ Calor</button>
+                        <button class="btn-clima" data-clima="ameno">⛅ Ameno</button>
+                        <button class="btn-clima" data-clima="frio">❄️ Frio</button>
+                    </div>
+                </div>
+
+                <div class="card-look">
+                    <h2>Look de Hoje</h2>
+                    <div class="pecas-container">
+                        <div class="peca-box">
+                            <span class="categoria-label">Parte de Cima</span>
+                            <img id="img-superior" class="preview-img" src="" alt="Parte de Cima">
+                            <strong id="peca-superior">-</strong>
+                        </div>
+                        <div class="peca-box">
+                            <span class="categoria-label">Parte de Baixo</span>
+                            <img id="img-inferior" class="preview-img" src="" alt="Parte de Baixo">
+                            <strong id="peca-inferior">-</strong>
+                        </div>
+                        <div class="peca-box">
+                            <span class="categoria-label">Calçado / Acessório</span>
+                            <img id="img-calcado" class="preview-img" src="" alt="Calçado">
+                            <strong id="peca-calcado">-</strong>
+                        </div>
+                    </div>
+
+                    <button id="btn-combinar" class="btn-principal">🎲 GERAR NOVO LOOK</button>
+                </div>
+            </section>
+
+            <!-- Coluna Secundária: Cadastro de Peças -->
+            <aside class="card-cadastro">
+                <h3>➕ Adicionar Nova Peça</h3>
+                <form id="form-peca">
+                    <div class="input-group">
+                        <label for="nome-peca">Nome da Peça</label>
+                        <input type="text" id="nome-peca" placeholder="Ex: Casaco de Lã" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="categoria-peca">Categoria</label>
+                        <select id="categoria-peca" required>
+                            <option value="">Selecione...</option>
+                            <option value="superior">Parte de Cima</option>
+                            <option value="inferior">Parte de Baixo</option>
+                            <option value="calcado">Calçado / Acessório</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="clima-peca">Clima Indicado</label>
+                        <select id="clima-peca" required>
+                            <option value="">Selecione...</option>
+                            <option value="calor">☀️ Calor</option>
+                            <option value="ameno">⛅ Ameno</option>
+                            <option value="frio">❄️ Frio</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="url-imagem">URL da Imagem (opcional)</label>
+                        <input type="url" id="url-imagem" placeholder="https://link-da-imagem.com/foto.jpg">
+                    </div>
+
+                    <button type="submit" class="btn-secundario">Salvar Peça</button>
+                </form>
+            </aside>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
